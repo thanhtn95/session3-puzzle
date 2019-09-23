@@ -34,33 +34,30 @@
 </table>
 </body>
 <script>
+    const a = ["'pic/funny-cat1_part1x1.jpg'", "'pic/monkey_part1x1.jpg'", "'pic/panda_swap_part1x1.jpg'"];
+    const b = ["'pic/funny-cat1_part2x1.jpg'", "'pic/monkey_part2x1.jpg'", "'pic/panda_swap_part2x1.jpg'"];
+    const c = ["'pic/funny-cat1_part3x1.jpg'", "'pic/monkey_part3x1.jpg'", "'pic/panda_swap_part3x1.jpg'"];
+    const d = ["'pic/funny-cat1_part4x1.jpg'", "'pic/monkey_part4x1.jpg'", "'pic/panda_swap_part4x1.jpg'"];
+    const e = ["'pic/funny-cat1_part5x1.jpg'", "'pic/monkey_part5x1.jpg'", "'pic/panda_swap_part5x1.jpg'"];
     function rand(id) {
-        let a = ["'pic/funny-cat1_part1x1.jpg'", "'pic/monkey_part1x1.jpg'", "'pic/panda_swap_part1x1.jpg'"];
-        let b = ["'pic/funny-cat1_part2x1.jpg'", "'pic/monkey_part2x1.jpg'", "'pic/panda_swap_part2x1.jpg'"];
-        let c = ["'pic/funny-cat1_part3x1.jpg'", "'pic/monkey_part3x1.jpg'", "'pic/panda_swap_part3x1.jpg'"];
-        let d = ["'pic/funny-cat1_part4x1.jpg'", "'pic/monkey_part4x1.jpg'", "'pic/panda_swap_part4x1.jpg'"];
-        let e = ["'pic/funny-cat1_part5x1.jpg'", "'pic/monkey_part5x1.jpg'", "'pic/panda_swap_part5x1.jpg'"];
+
         if (id == "t1") {
             let rd = Math.floor((Math.random() * 3));
             let t1 = document.getElementById("t1");
             t1.innerHTML = "<img id='p1' src=" + a[rd] + ">";
-        }
-        if (id == "t2") {
+        }else if (id == "t2") {
             let rd = Math.floor((Math.random() * 3));
             let t2 = document.getElementById("t2");
             t2.innerHTML = "<img id='p2' src=" + b[rd] + ">";
-        }
-        if (id == "t3") {
+        }else if (id == "t3") {
             let rd = Math.floor((Math.random() * 3));
             let t3 = document.getElementById("t3");
             t3.innerHTML = "<img id='p3' src=" + c[rd] + ">";
-        }
-        if (id == "t4") {
+        }else if (id == "t4") {
             let rd = Math.floor((Math.random() * 3));
             let t4 = document.getElementById("t4");
             t4.innerHTML = "<img id='p4' src=" + d[rd] + ">";
-        }
-        if (id == "t5") {
+        }else if (id == "t5") {
             let rd = Math.floor((Math.random() * 3));
             let t5 = document.getElementById("t5");
             t5.innerHTML = "<img id='p5' src=" + e[rd] + ">";
@@ -103,11 +100,6 @@
         }
     }
     function start() {
-        let a = ["'pic/funny-cat1_part1x1.jpg'", "'pic/monkey_part1x1.jpg'", "'pic/panda_swap_part1x1.jpg'"];
-        let b = ["'pic/funny-cat1_part2x1.jpg'", "'pic/monkey_part2x1.jpg'", "'pic/panda_swap_part2x1.jpg'"];
-        let c = ["'pic/funny-cat1_part3x1.jpg'", "'pic/monkey_part3x1.jpg'", "'pic/panda_swap_part3x1.jpg'"];
-        let d = ["'pic/funny-cat1_part4x1.jpg'", "'pic/monkey_part4x1.jpg'", "'pic/panda_swap_part4x1.jpg'"];
-        let e = ["'pic/funny-cat1_part5x1.jpg'", "'pic/monkey_part5x1.jpg'", "'pic/panda_swap_part5x1.jpg'"];
         let rd = Math.floor((Math.random() * 3));
         let t1 = document.getElementById("t1");
         t1.innerHTML = "<img id='p1' src=" + a[rd] + ">";
