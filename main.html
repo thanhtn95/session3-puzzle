@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    img {
+        display: block;
+        margin: 1em;
+        padding: 0.2em;
+        box-shadow: 2px 3px 3px black;
+        width: 600px;
+        height: 150px;
+    }
+</style>
+<table>
+    <tr>
+        <td id="t1" onclick="rand(this.id)"><img id="p1" src="pic/funny-cat1_part1x1.jpg"></td>
+    </tr>
+    <tr>
+        <td id="t2" onclick="rand(this.id)"><img id="p2" src="pic/funny-cat1_part2x1.jpg"></td>
+    </tr>
+    <tr>
+        <td id="t3" onclick="rand(this.id)"><img id="p3" src="pic/funny-cat1_part3x1.jpg"></td>
+    </tr>
+    <tr>
+        <td id="t4" onclick="rand(this.id)"><img id="p4" src="pic/funny-cat1_part4x1.jpg"></td>
+    </tr>
+    <tr>
+        <td id="t5" onclick="rand(this.id)"><img id="p5" src="pic/funny-cat1_part5x1.jpg"></td>
+    </tr>
+</table>
+</body>
+<script>
+    function rand(id) {
+        let a = ["'pic/funny-cat1_part1x1.jpg'", "'pic/monkey_part1x1.jpg'", "'pic/panda_swap_part1x1.jpg'"];
+        let b = ["'pic/funny-cat1_part2x1.jpg'", "'pic/monkey_part2x1.jpg'", "'pic/panda_swap_part2x1.jpg'"];
+        let c = ["'pic/funny-cat1_part3x1.jpg'", "'pic/monkey_part3x1.jpg'", "'pic/panda_swap_part3x1.jpg'"];
+        let d = ["'pic/funny-cat1_part4x1.jpg'", "'pic/monkey_part4x1.jpg'", "'pic/panda_swap_part4x1.jpg'"];
+        let e = ["'pic/funny-cat1_part5x1.jpg'", "'pic/monkey_part5x1.jpg'", "'pic/panda_swap_part5x1.jpg'"];
+        if (id == "t1") {
+            let rd = Math.floor((Math.random() * 3));
+            let t1 = document.getElementById("t1");
+            t1.innerHTML = "<img id='p1' src=" + a[rd] + ">";
+        }
+        if (id == "t2") {
+            let rd = Math.floor((Math.random() * 3));
+            let t2 = document.getElementById("t2");
+            t2.innerHTML = "<img id='p2' src=" + b[rd] + ">";
+        }
+        if (id == "t3") {
+            let rd = Math.floor((Math.random() * 3));
+            let t3 = document.getElementById("t3");
+            t3.innerHTML = "<img id='p3' src=" + c[rd] + ">";
+        }
+        if (id == "t4") {
+            let rd = Math.floor((Math.random() * 3));
+            let t4 = document.getElementById("t4");
+            t4.innerHTML = "<img id='p4' src=" + d[rd] + ">";
+        }
+        if (id == "t5") {
+            let rd = Math.floor((Math.random() * 3));
+            let t5 = document.getElementById("t5");
+            t5.innerHTML = "<img id='p5' src=" + e[rd] + ">";
+        }
+        check();
+
+    }
+
+    function check() {
+        let x1 = document.getElementById('p1');
+        let x2 = document.getElementById('p2');
+        let x3 = document.getElementById('p3');
+        let x4 = document.getElementById('p4');
+        let x5 = document.getElementById('p5');
+        let y1 = x1.src;
+        let y2 = x2.src;
+        let y3 = x3.src;
+        let y4 = x4.src;
+        let y5 = x5.src;
+        if (y1.includes("cat") && y2.includes("cat") && y3.includes("cat") && y4.includes("cat") && y5.includes("cat")) {
+            x1.style.border = "7px solid red";
+            x2.style.border = "7px solid red";
+            x3.style.border = "7px solid red";
+            x4.style.border = "7px solid red";
+            x5.style.border = "7px solid red";
+        }
+        if (y1.includes("monkey") && y2.includes("monkey") && y3.includes("monkey") && y4.includes("monkey") && y5.includes("monkey")) {
+            x1.style.border = "7px solid red";
+            x2.style.border = "7px solid red";
+            x3.style.border = "7px solid red";
+            x4.style.border = "7px solid red";
+            x5.style.border = "7px solid red";
+        }
+        if (y1.includes("panda") && y2.includes("panda") && y3.includes("panda") && y4.includes("panda") && y5.includes("panda")) {
+            x1.style.border = "7px solid red";
+            x2.style.border = "7px solid red";
+            x3.style.border = "7px solid red";
+            x4.style.border = "7px solid red";
+            x5.style.border = "7px solid red";
+        }
+    }
+
+
+</script>
+</html>
