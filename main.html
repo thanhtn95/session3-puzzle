@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="start()">
 <style>
     img {
         display: block;
@@ -17,19 +17,19 @@
 </style>
 <table>
     <tr>
-        <td id="t1" onclick="rand(this.id)"><img id="p1" src="pic/funny-cat1_part1x1.jpg"></td>
+        <td id="t1" onclick="rand(this.id)"></td>
     </tr>
     <tr>
-        <td id="t2" onclick="rand(this.id)"><img id="p2" src="pic/funny-cat1_part2x1.jpg"></td>
+        <td id="t2" onclick="rand(this.id)"></td>
     </tr>
     <tr>
-        <td id="t3" onclick="rand(this.id)"><img id="p3" src="pic/funny-cat1_part3x1.jpg"></td>
+        <td id="t3" onclick="rand(this.id)"></td>
     </tr>
     <tr>
-        <td id="t4" onclick="rand(this.id)"><img id="p4" src="pic/funny-cat1_part4x1.jpg"></td>
+        <td id="t4" onclick="rand(this.id)"></td>
     </tr>
     <tr>
-        <td id="t5" onclick="rand(this.id)"><img id="p5" src="pic/funny-cat1_part5x1.jpg"></td>
+        <td id="t5" onclick="rand(this.id)"></td>
     </tr>
 </table>
 </body>
@@ -101,6 +101,28 @@
             x4.style.border = "7px solid red";
             x5.style.border = "7px solid red";
         }
+    }
+    function start() {
+        let a = ["'pic/funny-cat1_part1x1.jpg'", "'pic/monkey_part1x1.jpg'", "'pic/panda_swap_part1x1.jpg'"];
+        let b = ["'pic/funny-cat1_part2x1.jpg'", "'pic/monkey_part2x1.jpg'", "'pic/panda_swap_part2x1.jpg'"];
+        let c = ["'pic/funny-cat1_part3x1.jpg'", "'pic/monkey_part3x1.jpg'", "'pic/panda_swap_part3x1.jpg'"];
+        let d = ["'pic/funny-cat1_part4x1.jpg'", "'pic/monkey_part4x1.jpg'", "'pic/panda_swap_part4x1.jpg'"];
+        let e = ["'pic/funny-cat1_part5x1.jpg'", "'pic/monkey_part5x1.jpg'", "'pic/panda_swap_part5x1.jpg'"];
+        let rd = Math.floor((Math.random() * 3));
+        let t1 = document.getElementById("t1");
+        t1.innerHTML = "<img id='p1' src=" + a[rd] + ">";
+        rd = Math.floor((Math.random() * 3));
+        let t2 = document.getElementById("t2");
+        t2.innerHTML = "<img id='p2' src=" + b[rd] + ">";
+         rd = Math.floor((Math.random() * 3));
+        let t3 = document.getElementById("t3");
+        t3.innerHTML = "<img id='p3' src=" + c[rd] + ">";
+         rd = Math.floor((Math.random() * 3));
+        let t4 = document.getElementById("t4");
+        t4.innerHTML = "<img id='p4' src=" + d[rd] + ">";
+         rd = Math.floor((Math.random() * 3));
+        let t5 = document.getElementById("t5");
+        t5.innerHTML = "<img id='p5' src=" + e[rd] + ">";
     }
 
 
