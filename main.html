@@ -34,7 +34,7 @@
 </table>
 </body>
 <script>
-    let n1,n2,n3,n4,n5;
+    let n1, n2, n3, n4, n5;
     const a = ["pic/funny-cat1_part1x1.jpg", "pic/monkey_part1x1.jpg", "pic/panda_swap_part1x1.jpg"];
     const b = ["pic/funny-cat1_part2x1.jpg", "pic/monkey_part2x1.jpg", "pic/panda_swap_part2x1.jpg"];
     const c = ["pic/funny-cat1_part3x1.jpg", "pic/monkey_part3x1.jpg", "pic/panda_swap_part3x1.jpg"];
@@ -53,25 +53,13 @@
         let x4 = document.getElementById('t4');
         let x5 = document.getElementById('t5');
         if (x1.src.includes("cat") && x2.src.includes("cat") && x3.src.includes("cat") && x4.src.includes("cat") && x5.src.includes("cat")) {
-            x1.style.border = "7px solid red";
-            x2.style.border = "7px solid red";
-            x3.style.border = "7px solid red";
-            x4.style.border = "7px solid red";
-            x5.style.border = "7px solid red";
-        }
-        if (x1.src.includes("monkey") && x2.src.includes("monkey") && x3.src.includes("monkey") && x4.src.includes("monkey") && x5.src.includes("monkey")) {
-            x1.style.border = "7px solid red";
-            x2.style.border = "7px solid red";
-            x3.style.border = "7px solid red";
-            x4.style.border = "7px solid red";
-            x5.style.border = "7px solid red";
-        }
-        if (x1.src.includes("panda") && x2.src.includes("panda") && x3.src.includes("panda") && x4.src.includes("panda") && x5.src.includes("panda")) {
-            x1.style.border = "7px solid red";
-            x2.style.border = "7px solid red";
-            x3.style.border = "7px solid red";
-            x4.style.border = "7px solid red";
-            x5.style.border = "7px solid red";
+            changered(x1, x2, x3, x4, x5);
+        } else if (x1.src.includes("monkey") && x2.src.includes("monkey") && x3.src.includes("monkey") && x4.src.includes("monkey") && x5.src.includes("monkey")) {
+            changered(x1, x2, x3, x4, x5);
+        } else if (x1.src.includes("panda") && x2.src.includes("panda") && x3.src.includes("panda") && x4.src.includes("panda") && x5.src.includes("panda")) {
+            changered(x1, x2, x3, x4, x5);
+        } else {
+            reset(x1, x2, x3, x4, x5);
         }
     }
 
@@ -88,42 +76,57 @@
 
         switch (id) {
             case 't1':
-                while(n1==rd){
+                while (n1 == rd) {
                     rd = Math.floor((Math.random() * 3));
                 }
                 t.src = a[rd];
-                n1=rd;
+                n1 = rd;
                 break;
             case 't2':
-                while(n2==rd){
+                while (n2 == rd) {
                     rd = Math.floor((Math.random() * 3));
                 }
                 t.src = b[rd];
-                n2=rd;
+                n2 = rd;
                 break;
             case 't3':
-                while(n3==rd){
+                while (n3 == rd) {
                     rd = Math.floor((Math.random() * 3));
                 }
                 t.src = c[rd];
-                n3=rd;
+                n3 = rd;
                 break;
             case 't4':
-                while(n4==rd){
+                while (n4 == rd) {
                     rd = Math.floor((Math.random() * 3));
                 }
                 t.src = d[rd];
-                n4=rd;
+                n4 = rd;
                 break;
             case 't5':
-                while(n5==rd){
+                while (n5 == rd) {
                     rd = Math.floor((Math.random() * 3));
                 }
                 t.src = e[rd];
-                n5=rd;
+                n5 = rd;
                 break;
         }
+    }
 
+    function changered(x1, x2, x3, x4, x5) {
+        x1.style.border = "7px solid red";
+        x2.style.border = "7px solid red";
+        x3.style.border = "7px solid red";
+        x4.style.border = "7px solid red";
+        x5.style.border = "7px solid red";
+    }
+
+    function reset(x1, x2, x3, x4, x5) {
+        x1.style.border = "initial";
+        x2.style.border = "initial";
+        x3.style.border = "initial";
+        x4.style.border = "initial";
+        x5.style.border = "initial";
     }
 
 </script>
